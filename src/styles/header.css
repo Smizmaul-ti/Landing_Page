@@ -1,0 +1,164 @@
+/* Estilos para o cabeçalho */
+header {
+    width: 100%;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary-1);
+    z-index: 3;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre a logo e a descrição */
+}
+
+.logo-container img {
+    height: 80px; /* Altura fixa para o logo */
+    width: auto;
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    font-weight: 600;
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+.nav-item.active a {
+    color: var(--color-primary-6);
+    border-bottom: 3px solid var(--color-primary-4);
+}
+
+/* Centralizar o botão "Contato WhatsApp" */
+.contact-whatsapp {
+    display: flex;
+    align-items: center;
+}
+
+.contact-whatsapp .btn-default {
+    padding: 10px 20px;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0px;
+}
+
+#mobile_nav_list .nav-item {
+    list-style: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    .btn-default {
+        display: none !important; /* !important adicionado para garantir a prioridade do estilo */
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+    }
+}
+
+/* CSS para esconder o botão mobile e a frase "Bombas a Vácuo & Sucção" na versão mobile */
+@media (max-width: 600px) {
+    #mobile_btn {
+        display: none;
+    }
+
+    .logo-container span {
+        display: none;
+    }
+
+    #nav_list .nav-item {
+        margin: 10px 0;
+    }
+
+    /* Garantir que os itens de navegação tenham o mesmo estilo */
+    #nav_list .nav-item a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+    }
+
+    .contact-whatsapp a {
+        background-color: #25d366;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .contact-whatsapp a:hover {
+        background-color: #128c7e;
+    }
+}
+
+/* CSS para exibir a frase "Bombas a Vácuo & Sucção" apenas na versão desktop */
+@media (min-width: 769px) {
+    .logo-container span {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0; /* Remove o espaço entre a logo e o texto */
+    }
+
+    .logo-container img {
+        height: 60px; /* Altura reduzida para se ajustar melhor */
+        width: auto;
+    }
+
+    /* Ocultar a descrição "Bombas a Vácuo & Sucção" na versão mobile */
+    .logo-container span {
+        display: none;
+    }
+
+    #nav_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha quando não couberem */
+        gap: 12px; /* Espaçamento entre os itens de navegação */
+        margin-top: 10px; /* Espaçamento superior para separar da logo */
+    }
+
+    .nav-item {
+        text-align: center;
+        flex: 1 0 auto; /* Para garantir que os itens se distribuam igualmente */
+    }
+
+    .contact-whatsapp {
+        text-align: center;
+        margin-top: 10px; /* Espaçamento superior */
+    }
+}

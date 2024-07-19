@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bombas a Vácuo & Sucção</title>
+    <link rel="icon" type="image/png" href="./src/images/ADMM.png" />
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <link rel="stylesheet" href="src/styles/header.css" />
+    <link rel="stylesheet" href="src/styles/footer.css" />
+    <link rel="stylesheet" href="src/styles/home.css" />
+    <link rel="stylesheet" href="src/styles/menu.css" />
+    <link rel="stylesheet" href="src/styles/sobre.css" />
+    <link rel="stylesheet" href="src/styles/testimonials.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @media screen and (max-width: 768px) {
+        .section-title {
+          text-align: center;
+          margin: 0 auto;
+          display: block;
+        }
+
+        #nav_list {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          flex-wrap: wrap;
+          /* Para garantir que os itens se ajustem na tela */
+        }
+
+        #nav_list.active {
+          display: flex;
+        }
+
+        .nav-item {
+          text-align: center;
+          padding: 10px;
+          flex: 1 0 auto;
+          /* Para garantir que os itens se distribuem igualmente */
+        }
+      }
+
+      /* Garantir que o texto dos botões não quebre a linha */
+      #cta_buttons a.btn-default {
+        white-space: nowrap;
+      }
+
+      #cta_buttons a#phone_button {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      #cta_buttons a#phone_button .btn-default {
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="logo-container">
+          <a href="index.html" id="nav_logo">
+            <img src="./src/images/ADMM.png" alt="Logo da ADM Bombas" />
+          </a>
+          <span>Bombas a Vácuo & Sucção</span>
+        </div>
+        <ul id="nav_list">
+          <li class="nav-item">
+            <a href="#home">Início</a>
+          </li>
+          <li class="nav-item">
+            <a href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu">Produtos</a>
+          </li>
+          <li class="nav-item contact-whatsapp">
+            <a
+              href="https://wa.me/5519982720920?text=Olá%2C%20Estou%20interessado%20nos%20serviços%20de%20Bombas%20da%20ADM%20Bombas%20de%20sucção%20e%20dejetos."
+              class="btn-default"
+              target="_blank"
+              >Contato WhatsApp</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section id="home">
+        <div class="shape"></div>
+        <div id="cta">
+          <h1 class="title">
+            Oferecemos o menor prazo de entrega da
+            <span>região</span>
+          </h1>
+
+          <p class="description">Há 35 anos no segmento de fundição.</p>
+
+          <div id="cta_buttons">
+            <a
+              href="https://wa.me/5519982720920?text=Olá%2C%20Estou%20interessado%20nos%20serviços%20de%20Bombas%20da%20ADM%20Bombas%20de%20sucção%20e%20dejetos."
+              class="btn-default"
+              target="_blank"
+              >Realize a sua cotação</a
+            >
+
+            <a href="tel:+5519982720920" id="phone_button">
+              <button class="btn-default">
+                <i class="fas fa-phone"></i>
+              </button>
+              (19) 98272-0920
+            </a>
+          </div>
+
+          <div class="social-media-buttons">
+            <a
+              href="https://wa.me/5519982720920?text=Olá%2C%20Estou%20interessado%20nos%20serviços%20de%20Bombas%20da%20ADM%20Bombas%20de%20sucção%20e%20dejetos."
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.instagram.com/adm.bombas">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div id="banner"></div>
+      </section>
+
+      <section id="sobre">
+        <h2 class="section-title">Sobre</h2>
+        <div class="sobre-container">
+          <img
+            src="src/images/PF.png"
+            alt="Descrição da imagem"
+            class="sobre-imagem"
+          />
+          <div class="sobre-texto">
+            <p>
+              Meu nome é Adao Moreira Soares, sou natural de Caetite/BA e resido
+              na cidade de Araras desde 1985.
+              <br />
+              Na área metalúrgica desde 1986, a partir de 1989 com foco na área
+              de fundição, especialização na área de bombas a vácuo desde 2006.
+              <br />
+              Em 2014, recebi o título de cidadão ararense em homenagem pela
+              Câmara Municipal de Araras.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="menu">
+        <h2 class="section-title">Produtos</h2>
+        <h3 class="section-subtitle">Linha completa de Bombas</h3>
+
+        <div id="dishes">
+          <div class="dish">
+            <div class="dish-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+
+            <img
+              src="src/images/3.png"
+              class="dish-image"
+              alt="Imagem de Bomba Pequena"
+            />
+
+            <h3 class="dish-title">Bomba Vácuo Pequena</h3>
+
+            <span class="dish-description">
+              Modelo: BVTECH-1000 - Tanque 1000L - (204) 3,4.
+            </span>
+
+            <div class="dish-rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(+25k)</span>
+            </div>
+
+            <div class="dish-price">
+              <button class="btn-default">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="dish">
+            <div class="dish-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+
+            <img
+              src="src/images/4.png"
+              class="dish-image"
+              alt="Imagem de Bomba Média"
+            />
+
+            <h3 class="dish-title">Bomba Vácuo Média</h3>
+
+            <span class="dish-description">
+              Modelo: BVTECH-280 - Tanque 1500 a 5000L - (306) 5,1.
+            </span>
+
+            <div class="dish-rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(+12k)</span>
+            </div>
+
+            <div class="dish-price">
+              <button class="btn-default">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="dish">
+            <div class="dish-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+            <img
+              src="src/images/DNB.svg"
+              class="dish-image"
+              alt="Imagem de Bomba Grande"
+            />
+
+            <h3 class="dish-title">Bomba Vácuo Grande</h3>
+            <span class="dish-description">
+              Modelo: BVTECH-720 - Tanque 5000 a 12000L - (780) 13,0.
+            </span>
+            <div class="dish-rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(+16k)</span>
+            </div>
+
+            <div class="dish-price">
+              <button class="btn-default">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="dish">
+            <div class="dish-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+
+            <img
+              src="src/images/2.png"
+              class="dish-image"
+              alt="Imagem de Bomba Extra"
+            />
+
+            <h3 class="dish-title">Bomba Vácuo Extra</h3>
+
+            <span class="dish-description">
+              Modelo: BVTECH-840 - Tanque 12000 a 25000L - (900) 15,0.
+            </span>
+
+            <div class="dish-rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(+9k)</span>
+            </div>
+
+            <div class="dish-price">
+              <button class="btn-default">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="dish">
+            <div class="dish-heart">
+              <i class="fas fa-heart"></i>
+            </div>
+
+            <img
+              src="src/images/ac.png"
+              class="dish-image"
+              alt="Imagem de modelo personalizado"
+            />
+
+            <h3 class="dish-title">Modelo Personalizado</h3>
+
+            <span class="dish-description">
+              Trabalhamos com acessórios, itens de reposição e personalização.
+            </span>
+
+            <div class="dish-rate">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(+500)</span>
+            </div>
+
+            <div class="dish-price">
+              <button class="btn-default">
+                <i class="fas fa-shopping-basket"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="testimonial-image-container">
+          <img
+            src="src/images/admd.jpg"
+            id="testimonial_image"
+            alt="Imagem do Chef"
+          />
+        </div>
+        <div id="testimonials_content">
+          <h2 class="section-title">Feedback de alguns dos nossos clientes</h2>
+          <div id="feedbacks">
+            <div class="feedback">
+              <img
+                src="src/images/DNB.png"
+                class="feedback-avatar"
+                alt="Avatar"
+              />
+              <div class="feedback-content">
+                <p>
+                  DN Bombas
+                  <span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </p>
+                <p>
+                  Entrega rápida, atendimento excelente e produtos de qualidade.
+                </p>
+              </div>
+            </div>
+
+            <div class="feedback">
+              <img
+                src="src/images/eurovac.png"
+                class="feedback-avatar"
+                alt="Avatar"
+              />
+              <div class="feedback-content">
+                <p>
+                  Euro-Vac Equipamentos
+                  <span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </p>
+                <p>
+                  Fundidos duráveis, preço competitivo e agilidade no
+                  atendimento.
+                </p>
+              </div>
+            </div>
+
+            <div class="feedback">
+              <img
+                src="src/images/TECHFER.png"
+                class="feedback-avatar"
+                alt="Avatar"
+              />
+              <div class="feedback-content">
+                <p>
+                  TecFer M Industrial
+                  <span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </p>
+                <p>
+                  Fundidos de qualidade, preço justo e atendimento impecável.
+                </p>
+              </div>
+            </div>
+
+            <div class="feedback">
+              <img
+                src="src/images/PR.png"
+                class="feedback-avatar"
+                alt="Avatar"
+              />
+              <div class="feedback-content">
+                <p>
+                  Usinagem Peressim
+                  <span>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </span>
+                </p>
+                <p>
+                  Atendimento de primeira, entrega rápida e produtos que superam
+                  as expectativas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer_items">
+        <span id="copyright">&copy; Smizmaul Soluções de T.I</span>
+        <div class="social-media-buttons">
+          <a
+            href="https://wa.me/5519974092363?text=Olá%2C%20Tudo%20Bem?%20Estou%20interessado%20nos%20serviços%20da%20Smizmaul%20Soluções%20de%20TI."
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
+          <a href="https://www.instagram.com/smizmaul.ti/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/smizmaul.solucoes" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/javascript/script.js"></script>
+    <script>
+      document
+        .getElementById("mobile_btn")
+        .addEventListener("click", function () {
+          document.getElementById("nav_list").classList.toggle("active");
+        });
+    </script>
+  </body>
+</html>

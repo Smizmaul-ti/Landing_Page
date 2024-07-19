@@ -1,0 +1,129 @@
+#home {
+    display: flex;
+    min-height: calc(100vh - 91px);
+    position: relative;
+}
+
+#cta {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+    z-index: 2; /* Colocando acima do banner */
+}
+
+#cta .title {
+    font-size: 4rem;
+    color: var(--color-neutral-1);
+}
+
+#cta .title span {
+    color: var(--color-primary-6);
+}
+
+#cta .description {
+    font-size: 1.2rem;
+}
+
+#cta_buttons {
+    display: flex;
+    gap: 24px;
+}
+
+#cta_buttons a {
+    text-decoration: none;
+    color: var(--color-neutral-1);
+}
+
+#phone_button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 8px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#banner {
+    position: relative;
+    width: 65%; /* Ajuste conforme necessário */
+    z-index: 1; /* Colocando abaixo do conteúdo do CTA */
+    overflow: hidden;
+}
+
+#banner img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.shape {
+    background-color: var(--color-primary-2);
+    width: 50%;
+    height: 69%;
+    position: absolute;
+    border-radius: 60% 80% 50% 20%;
+    top: 0;
+    right: 0;
+    z-index: 0; /* Colocando atrás do banner */
+}
+
+@media screen and (max-width: 1170px) {
+    #home {
+        min-height: 100%;
+        padding-top: 0;
+    }
+
+    #banner,
+    #banner img,
+    .shape {
+        display: none;
+    }
+
+    #cta {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        z-index: 2; /* Mantendo acima do banner escondido */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* Ocultar o botão dentro de #phone_button em telas menores */
+    #phone_button button {
+        display: none;
+    }
+}
+
+/* Estilos para o banner */
+#banner {
+    width: 100%;
+    height: 400px; /* Altura do banner, ajuste conforme necessário */
+    overflow: hidden;
+    align-self: center; /* Centralizando verticalmente */
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.banner-content img {
+    max-width: 80%; /* Aumentando a largura para melhor proporção */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centralizando horizontalmente */
+}
+
+.banner-content p {
+    font-size: 2.4rem; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #fff; /* Cor do texto */
+    margin-top: 20px; /* Espaçamento superior */
+}

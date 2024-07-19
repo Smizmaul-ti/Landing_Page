@@ -1,0 +1,68 @@
+/* Estilo específico para a seção Sobre */
+#sobre {
+  padding: 25px 8px 15px; /* Corrigido o erro na definição do padding */
+  background-color: var(--color-primary-2);
+  text-align: center;
+}
+
+#sobre h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary-4);
+  text-align: center; /* Centraliza o título "Sobre" na versão desktop */
+  margin-bottom: 20px; /* Mantém a margem padrão */
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: column; /* Mudança para coluna na versão mobile */
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+.sobre-imagem {
+  max-width: 100%; /* Imagem responsiva */
+  height: auto;
+  border-radius: 12px; /* Cantos arredondados */
+  margin-bottom: 15px; /* Espaçamento inferior para imagem */
+}
+
+.sobre-texto {
+  max-width: 100%; /* Texto responsivo */
+  text-align: justify; /* Texto justificado */
+  color: var(--color-neutral-1);
+  font-size: 1.2em;
+  line-height: 1.9;
+}
+
+@media (min-width: 769px) {
+  .sobre-container {
+    flex-direction: row; /* Voltar para linha na versão desktop */
+    align-items: center;
+  }
+
+  .sobre-imagem {
+    width: 350px; /* Largura fixa para imagem na versão desktop */
+    margin-right: 15px; /* Espaçamento entre imagem e texto na versão desktop */
+    margin-bottom: 0; /* Remover margem inferior na versão desktop */
+  }
+
+  .sobre-texto {
+    max-width: calc(100% - 370px); /* Ajuste da largura do texto na versão desktop */
+    margin-top: 0; /* Remover margem superior na versão desktop */
+  }
+
+  #sobre h2 {
+    margin-bottom: 0px; /* Reduzir a margem inferior na versão desktop */
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-imagem {
+    max-width: 80%; /* Imagem ocupando até 80% da largura na versão mobile */
+  }
+
+  .sobre-texto {
+    padding: 0 15px; /* Adicionar padding lateral para melhor leitura */
+  }
+}

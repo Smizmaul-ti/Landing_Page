@@ -1,0 +1,283 @@
+/* Definição das variáveis de cor personalizadas */
+:root {
+    --color-primary-1: #F5FCFF;
+    --color-primary-2: #f0f4f5;
+    --color-primary-3: #1791C8;
+    --color-primary-4: #1791C8;
+    --color-primary-5: #D6D6D6;
+    --color-primary-6: #1791C8;
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+}
+
+
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Importação de estilos CSS separados */
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('testimonials.css');
+@import url('footer.css');
+@import url('sobre.css');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global para toda a página */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary-1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Tamanho base da fonte */
+}
+
+/* Estilo para seções */
+section {
+    padding: 28px 8%;
+}
+
+/* Estilo para botões padrão */
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-5);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3);
+}
+
+/* Estilo para botões de mídia social */
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para títulos de seção */
+.section-title {
+    color: var(--color-primary-6);
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    font-size: 2.1875rem;
+}
+
+/* Ajuste para o título principal na seção home */
+.title {
+    font-size: 2rem; /* Tamanho original da fonte */
+}
+
+@media (max-width: 768px) {
+    /* Ajuste para dispositivos móveis */
+    .title {
+        font-size: 1.5rem; /* Tamanho menor para dispositivos móveis */
+        padding: 0 5%; /* Adiciona padding lateral proporcional */
+    }
+}
+
+/* Estilos para o cabeçalho */
+header {
+    width: 100%;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-primary-1);
+    z-index: 3;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre a logo e a descrição */
+}
+
+.logo-container img {
+    height: 80px; /* Altura fixa para o logo */
+    width: auto;
+}
+
+#nav_list {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    font-weight: 600;
+    transition: color 0.3s ease; /* Transição suave para mudança de cor */
+}
+
+.nav-item.active a {
+    color: var(--color-primary-6);
+    border-bottom: 3px solid var(--color-primary-4);
+}
+
+/* Centralizar o botão "Contato WhatsApp" */
+.contact-whatsapp {
+    display: flex;
+    align-items: center;
+}
+
+.contact-whatsapp .btn-default {
+    padding: 10px 20px;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0px;
+}
+
+#mobile_nav_list .nav-item {
+    list-style: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    .btn-default {
+        display: none !important; /* !important adicionado para garantir a prioridade do estilo */
+    }
+
+    #mobile_btn {
+        display: block;
+    }
+
+    #mobile_menu.active {
+        display: flex;
+    }
+}
+
+/* CSS para esconder o botão mobile e a frase "Bombas a Vácuo & Sucção" na versão mobile */
+@media (max-width: 600px) {
+    #mobile_btn {
+        display: none;
+    }
+
+    .logo-container span {
+        display: none;
+    }
+
+    #nav_list .nav-item {
+        margin: 10px 0;
+    }
+
+    /* Garantir que os itens de navegação tenham o mesmo estilo */
+    #nav_list .nav-item a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: bold;
+    }
+
+    .contact-whatsapp a {
+        background-color: #25d366;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .contact-whatsapp a:hover {
+        background-color: #128c7e;
+    }
+
+    .logo-container {
+        gap: 50px; /* Aumenta o espaço entre a logo e a navegação */
+    }
+}
+
+/* CSS para exibir a frase "Bombas a Vácuo & Sucção" apenas na versão desktop */
+@media (min-width: 769px) {
+    .logo-container span {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px; /* Aumenta o espaço entre a logo e a navegação */
+    }
+
+    .logo-container img {
+        height: 60px; /* Altura reduzida para se ajustar melhor */
+        width: auto;
+    }
+
+    /* Ocultar a descrição "Bombas a Vácuo & Sucção" na versão mobile */
+    .logo-container span {
+        display: none;
+    }
+
+    #nav_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha quando não couberem */
+        gap: 12px; /* Espaçamento entre os itens de navegação */
+        margin-top: 10px; /* Espaçamento superior para separar da logo */
+        width: 100%; /* Garante que a lista de navegação ocupe 100% da largura */
+    }
+
+    .nav-item {
+        text-align: center;
+        flex: 1 0 auto; /* Para garantir que os itens se distribuam igualmente */
+    }
+
+    .contact-whatsapp {
+        text-align: center;
+        margin-top: 10px; /* Espaçamento superior */
+    }
+}

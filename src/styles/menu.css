@@ -1,0 +1,189 @@
+/* Estilos gerais */
+#nav_list {
+    display: flex;
+    /* Default: visível em todas as telas */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+.nav-item {
+    margin-left: 12px; /* Espaçamento entre os itens */
+    font-size: 14px; /* Tamanho da fonte dos itens */
+}
+
+.nav-item a {
+    position: relative;
+    color: #000000;
+    /* Cor original */
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #A5A5A5;
+    /* Cor alterada para hover */
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: transparent;
+    /* Cor original */
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover::after {
+    background-color: #1791C8;
+    /* Cor alterada para hover */
+}
+
+/* Estilo específico para o botão "Contato WhatsApp" */
+.contact-whatsapp a:hover {
+    color: #434343;
+    /* Mantém a cor original */
+}
+
+.contact-whatsapp a:hover::after {
+    background-color: transparent;
+    /* Mantém transparente */
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#dishes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 18px;
+    width: 25%;
+    padding: 20px;
+    background-color: var(--color-neutral-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dish-heart {
+    position: absolute;
+    background-color: var(--color-primary-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.563rem;
+    color: var(--color-primary-1);
+    width: 70px;
+    height: 70px;
+    right: -10px;
+    top: -10px;
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.dish-description {
+    color: #000000;
+    text-align: center;
+}
+
+.dish-rate i {
+    color: var(--color-primary-6);
+}
+
+.dish-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1170px) {
+    #dishes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dish {
+        width: calc(50% - 12px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dish {
+        width: 100%;
+    }
+
+    /* Mostra os botões de navegação no mobile */
+    .nav-item {
+        display: inline-block;
+        margin-left: 0;
+        text-align: center; /* Centraliza o texto dos botões */
+        font-size: 12px; /* Reduz o tamanho da fonte para se ajustar melhor */
+    }
+
+    /* Ajuste para garantir que o menu não seja ocultado */
+    #nav_list {
+        display: flex !important;
+        flex-wrap: wrap; /* Permite que os itens de navegação quebrem a linha */
+        justify-content: center; /* Centraliza os itens na linha */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+    .nav-item {
+        margin-left: 12px; /* Espaçamento entre os itens */
+    }
+}
+
+/* Corrigindo o bug do menu mobile */
+@media screen and (max-width: 768px) {
+    #nav_list {
+        flex-direction: column;
+        /* Organiza botões em coluna no mobile */
+        align-items: center;
+        /* Centraliza botões horizontalmente */
+        width: 100%;
+        /* Ocupa toda a largura da tela no mobile */
+    }
+
+    #menu .section-subtitle {
+        text-align: center;
+    }
+}
+
+/* Estilos adicionais específicos */
+.section-title {
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+}
+
+/* Bordas arredondadas para a seção Sobre */
+#sobre {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--color-neutral-0);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 32px 0;
+}
